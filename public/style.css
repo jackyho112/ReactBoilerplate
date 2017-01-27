@@ -1,0 +1,44 @@
+/*
+   Hi, this is bad CSS, you shouldn't structure your CSS this way.
+   Structurally based CSS is a bad idea because it's inherently brittle;
+   if you change the way your nest something you break it.
+   I'm doing it this way because it's less typing for everyone involved to not have to type long class names
+*/
+
+* {
+  box-sizing: border-box;;
+}
+
+html {
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/public/img/3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+}
+
+.app > h1 {
+  color: white;
+}
+
+.landing {
+  background-color: rgba(220, 220, 220, .7);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.landing > h1 {
+  color: #B10DC9;
+  font-family: Skia;
+  font-weight: normal;
+}
