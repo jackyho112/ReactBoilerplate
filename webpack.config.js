@@ -3,74 +3,74 @@ const webpack = require('webpack')
 
 module.exports = {
   context: __dirname,
-  entry: './js/ClientApp.js',
+  entry: './js/ClientApp.jsx',
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/public/',
   },
   devServer: {
     publicPath: '/pubic/',
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
       mangle: {
         screw_ie8: true,
-        keep_fnames: true
+        keep_fnames: true,
       },
       compress: {
         screw_ie8: true,
-        warnings: false
+        warnings: false,
       },
-      comments: false
+      comments: false,
     })
   ],
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.jsx', '.js', '.json'],
     alias: {
       react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
+      'react-dom': 'preact-compat',
+    },
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: true
+    chunks: true,
   },
   module: {
     rules: [
       {
         enforce: 'pre',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
+        exclude: /node_modules/,
       },
       {
         include: [
           path.resolve(__dirname, 'js'),
-          path.resolve('node_modules/preact-compat/src')
+          path.resolve(__dirname, 'jsx'),
+          path.resolve('node_modules/preact-compat/src'),
         ],
-        test: /\.js$/,
-        loader: 'babel-loader'
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           {
             loader: 'css-loader',
             options: {
-              url: false // Please don't inline the image
-            }
-          }
-        ]
-      }
-    ]
-  }
+              url: false, // Please don't inline the image
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+    ],
+  },
 }

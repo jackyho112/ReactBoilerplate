@@ -1,3 +1,9 @@
 {
-  "extends": ["standard", "standard-react"]
+  "extends": "airbnb",
+  "rules": {
+    "semi": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "global-require": "off"
+  }
 }

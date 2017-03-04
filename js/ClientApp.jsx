@@ -1,3 +1,7 @@
+/* global
+  document
+**/
+
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router'
@@ -7,5 +11,5 @@ render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.getElementById('app')
+  document.getElementById('app'),
 )
