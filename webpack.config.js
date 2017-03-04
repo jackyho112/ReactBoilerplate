@@ -9,8 +9,9 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/public/',
   },
+  devtool: 'inline-source-map',
   devServer: {
-    publicPath: '/pubic/',
+    publicPath: '/public/',
     historyApiFallback: true,
   },
   plugins: [
@@ -63,12 +64,10 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false, // Please don't inline the image
-            },
-          },
-          {
-            loader: 'sass-loader',
-          },
+              url: false // Please don't inline the image
+            }
+          }
+          'sass-loader',
         ],
       },
     ],
