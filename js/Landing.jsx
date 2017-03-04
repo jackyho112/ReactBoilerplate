@@ -4,7 +4,7 @@ import './main.scss'
 
 const Landing = () => (
   <div className="landing">
-    Mother fucker man
+    Mother fucker man yo man
   </div>
 )
 //

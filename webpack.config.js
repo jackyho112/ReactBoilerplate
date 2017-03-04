@@ -26,7 +26,7 @@ module.exports = {
         warnings: false,
       },
       comments: false,
-    })
+    }),
   ],
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
@@ -64,9 +64,9 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false // Please don't inline the image
-            }
-          }
+              url: false, // Please don't inline the image
+            },
+          },
           'sass-loader',
         ],
       },

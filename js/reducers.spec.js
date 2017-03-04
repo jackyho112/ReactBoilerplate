@@ -1,7 +1,10 @@
+/* global
+  expect, test
+**/
+
 import reducers from './reducers'
 
 test('@@INIT', () => {
-  let state
-  state = reducers(undefined, {})
+  const state = reducers(undefined, {})
   expect(state).toEqual({})
 })
