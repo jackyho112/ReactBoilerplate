@@ -13,7 +13,7 @@ const App = () => (
     <div className="app">
       <Route
         exact
-        pattern="/"
+        path="/"
         component={props => <AsyncRoute
           props={props}
           loadingPromise={System.import('./Landing')}
