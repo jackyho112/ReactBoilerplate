@@ -16,16 +16,17 @@
     "server": "NODE_ENV=server nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.15.0",
-    "history": "^4.5.1",
-    "lodash": "^4.17.4",
-    "preact": "^7.2.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
-    "react-router": "4.0.0-alpha.5",
+    "express": "4.15.0",
+    "history": "4.5.1",
+    "lodash": "4.17.4",
+    "preact": "7.2.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-redux": "5.0.3",
+    "react-router": "4.0.0",
+    "react-router-dom": "4.0.0",
     "preact-compat": "3.13.1",
-    "redux": "^3.6.0"
+    "redux": "3.6.0"
   },
   "devDependencies": {
     "babel-core": "6.16.0",

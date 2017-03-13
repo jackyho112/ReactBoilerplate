@@ -1,5 +1,5 @@
 import React from 'react'
-import { Match } from 'react-router'
+import { Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
 import AsyncRoute from './AsyncRoute'
@@ -11,8 +11,8 @@ if (global) {
 const App = () => (
   <Provider store={store}>
     <div className="app">
-      <Match
-        exactly
+      <Route
+        exact
         pattern="/"
         component={props => <AsyncRoute
           props={props}
