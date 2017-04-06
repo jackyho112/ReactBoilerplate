@@ -14,20 +14,6 @@ module.exports = {
     publicPath: '/public/',
     historyApiFallback: true,
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      beautify: false,
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true,
-      },
-      compress: {
-        screw_ie8: true,
-        warnings: false,
-      },
-      comments: false,
-    }),
-  ],
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
     alias: {
@@ -42,12 +28,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
       {
         include: [
           path.resolve(__dirname, 'js'),
