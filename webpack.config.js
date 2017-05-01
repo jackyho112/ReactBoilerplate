@@ -15,11 +15,11 @@ module.exports = {
     historyApiFallback: true,
   },
   resolve: {
-    extensions: ['.jsx', '.js', '.json'],
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat',
-    },
+    extensions: ['.jsx', '.js', '.json']
+    // alias: {
+    //   react: 'preact-compat',
+    //   'react-dom': 'preact-compat',
+    // },
   },
   stats: {
     colors: true,
